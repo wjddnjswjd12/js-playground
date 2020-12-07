@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <h1>소수판별</h1>
+    <script>
+      var a = Number(prompt("숫자를 입력하세요"));
+
+      for (var i = 2; i <= a; i++) {
+        if (a % i === 0) {
+          document.write(a + " 은 소수가 아닙니다.");
+          break;
+        } else {
+          document.write(a + "은 소수입니다");
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

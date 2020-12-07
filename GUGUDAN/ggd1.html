@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <h1>구구단</h1>
+    출력할 단:<input type="text" id="num" />
+    <button onclick="display()">확인</button>
+    <script>
+      //   var a = [];
+      //   var b = [];
+      //   for (let i = 1; i <= 9; i++) {
+      //     a[i] = 4 * i;
+      //     b[i] = 5 * i;
+      //     console.log(a[i] + "  " + b[i]);
+      //   }
+
+      function display() {
+        var strN = document.getElementById("num").value;
+        var num = Number(strN);
+        if (num < 2 || num > 9) {
+          document.write("2이상 9이하 숫자만 입력 가능");
+        } else {
+          for (var i = 1; i <= 9; i++) {
+            var a = i * num;
+            document.write(a + "<br>");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

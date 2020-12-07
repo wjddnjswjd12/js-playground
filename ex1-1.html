@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4칙연산</title>
+  </head>
+  <body>
+    <h1>와항항</h1>
+    <script>
+      var a = prompt("첫 번째 숫자를 입력해 주세요");
+      var b = prompt("두 번째 숫자를 입력해주세요");
+      var a1 = Number(a);
+      var b1 = Number(b);
+      var add, sub, mult, div;
+      add = a1 + b1;
+      sub = a1 - b1;
+      mult = a1 * b1;
+      div = a1 / b1;
+
+      console.log(
+        "덧셈 : " +
+          add +
+          " 뺄셈 : " +
+          sub +
+          " 곰셈 : " +
+          mult +
+          " 나눗셈 : " +
+          div
+      );
+      document.write("덧셈: " + add);
+      document.write("뺄셈: " + sub);
+      document.write("곱셈: " + mult);
+      document.write("나눗셈: " + div);
+    </script>
+  </body>
+</html>
