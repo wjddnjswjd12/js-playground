@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>구구단배열!</title>
+  </head>
+  <body>
+    <div id="gugu"></div>
+    <script>
+      var a = [];
+      var b = "";
+      for (var j = 2; j <= 9; j++) {
+        document.write("<h3><<< " + j + "단" + " >>><h3>" + "<br>");
+        for (var i = 1; i <= 9; i++) {
+          a[i - 1] = j * i;
+
+          b += j + "X" + i + "=" + a[i - 1] + "<br>";
+        }
+        document.write(b);
+      }
+    </script>
+  </body>
+</html>

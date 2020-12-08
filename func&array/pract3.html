@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>1~1000소수출력</title>
+  </head>
+  <body>
+    <script>
+      var numbers = {
+        all: [],
+        prime: [],
+        isPrime: function (number) {
+          for (var i = 2; i < number; i++) {
+            if (number % i === 0) {
+              return false;
+            }
+          }
+          return true;
+        },
+        getAllPrimes: function () {
+          this.addAll(1000);
+
+          this.addPrime(this.all);
+
+          document.write(
+            "1에서 " + this.all.length + 1 + " 사이의 소수를 출력하자!" + "<br>"
+          );
+          for (var i = 0; i <= this.prime.length; i++) {
+            document.write(i + 1 + " 번 째 소수 : " + this.prime[i] + "<br>");
+          }
+        },
+        addPrime: function (number) {
+          for (var i = 0; i <= this.all.length; i++) {
+            if (this.isPrime(number[i]) === true) {
+              this.prime.push(number[i]);
+            }
+          }
+        },
+        addAll: function (max_num) {
+          for (var i = 2; i <= max_num; i++) {
+            this.all[i - 2] = i;
+          }
+        },
+      };
+      numbers.getAllPrimes();
+      console.log(numbers.prime);
+      console.log(numbers.all);
+    </script>
+  </body>
+</html>
