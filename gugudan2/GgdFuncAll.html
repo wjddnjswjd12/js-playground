@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>발전한 구구단함수!</title>
+  </head>
+  <body>
+    <div id="gugu"></div>
+    <script>
+      function gugudan(num) {
+        var arr1 = [];
+        for (var i = 0; i < 9; i++) {
+          arr1[i] = num * (i + 1);
+        }
+        return arr1;
+      }
+
+      function printggd(num) {
+        for (var i = 0; i < 9; i++) {
+          var arr2 = gugudan(num);
+          document.write(num + " x " + (i + 1) + " = " + arr2[i] + "<br>");
+        }
+      }
+
+      function main() {
+        for (var i = 2; i <= 9; i++) {
+          document.write("<h2>" + i + " 단!!!" + "</h2>" + "<br>");
+          printggd(i);
+          document.write("<br>");
+        }
+      }
+      main();
+    </script>
+  </body>
+</html>

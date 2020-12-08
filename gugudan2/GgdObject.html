@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>객체로 쓴 구구단!</title>
+  </head>
+  <body>
+    <script>
+      var ggd = { result: [] };
+
+      ggd.main = function () {
+        for (var i = 2; i <= 9; i++) {
+          document.write("<h3>" + i + "단" + "</h3>" + "<br>");
+          this.printggd(i);
+          document.write("<br>");
+        }
+      };
+      ggd.printggd = function (num) {
+        this.gugudan(num);
+        for (var i = 0; i < 9; i++) {
+          document.write(num + "x" + (i + 1) + "=" + this.result[i] + "<br>");
+        }
+      };
+      ggd.gugudan = function (num) {
+        for (var i = 0; i < 9; i++) {
+          this.result[i] = num * (i + 1);
+        }
+      };
+
+      ggd.main();
+    </script>
+  </body>
+</html>
