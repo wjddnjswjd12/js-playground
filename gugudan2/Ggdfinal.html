@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>객체로 쓴 구구단!</title>
+  </head>
+  <body>
+    <input id="name" placeholder="예)8,7" />
+    <button onclick="ggd.main()">입력</button>
+    <p id="result"></p>
+    <script>
+      var ggd = { result: [], dan: 0, dannum: 0 };
+
+      ggd.main = function () {
+        var num = document.getElementById("name").value;
+        var num1 = num.split(",");
+        this.dan = Number(num1[0]);
+        this.dannum = Number(num1[1]);
+        for (var i = 2; i <= this.dan; i++) {
+          document.write("<h3>" + i + "단" + "</h3>" + "<br>");
+          this.printggd(i);
+          document.write("<br>");
+        }
+      };
+      ggd.printggd = function (num2) {
+        this.gugudan(num2);
+        for (var i = 0; i < this.dannum; i++) {
+          document.write(num2 + "x" + (i + 1) + "=" + this.result[i] + "<br>");
+        }
+      };
+      ggd.gugudan = function (num3) {
+        for (var i = 0; i < this.dannum; i++) {
+          this.result[i] = num3 * (i + 1);
+        }
+      };
+
+      ggd.main();
+    </script>
+  </body>
+</html>
