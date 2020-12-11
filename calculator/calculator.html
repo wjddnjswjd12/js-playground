@@ -3,10 +3,48 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>문자열 계산기 구현하기</h1>
-    <div id="output"></div>
-    사칙연산: <input id="input1" />
-    <button id="btn1" onclick="calculate()">계산</button>
-    <script src="calculate.js"></script>
+    <h1 id="hey">문자열 계산기 구현하기</h1>
+
+    <script>
+      function getFirstValue() {
+        var n1 = Number(prompt("첫 번째 숫자를 입력하시오."));
+        return n1;
+      }
+
+      function getSecondValue() {
+        return Number(prompt("다음 숫자를 입력하시오"));
+      }
+      function getOperator() {
+        return prompt("연산자를 입력하시오(+,-,x,/)");
+      }
+      function calculate() {
+        var result = getFirstValue();
+        while (true) {
+          var symbol = getOperator();
+          if (symbol === "p") break;
+          var n2 = getSecondValue();
+
+          if (symbol === "+") {
+            result += n2;
+          } else if (symbol === "-") {
+            result -= n2;
+          } else if (symbol === "x") {
+            result *= n2;
+          } else if (symbol === "/") {
+            result /= n2;
+          }
+        }
+        return result;
+      }
+      function print(value) {
+        var h = document.getElementById("hey");
+        h.innerHTML = "최종 결과값은 : " + calculate();
+      }
+
+      function main() {
+        print();
+      }
+      main();
+    </script>
   </body>
 </html>

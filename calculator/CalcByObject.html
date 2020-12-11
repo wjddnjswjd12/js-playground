@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="id1">문자열 계산기 구현하기</h1>
+
+    <script>
+      var input = {};
+      input.getFirstValue = function () {
+        return Number(prompt("첫 번째 숫자를 입력하시오."));
+      };
+      input.getSecondValue = function () {
+        return Number(prompt("다음 숫자를 입력하시오"));
+      };
+      input.getOperator = function () {
+        return prompt("연산자를 입력하시오(+,-,x,/)");
+      };
+
+      var output = {};
+      output.print = function () {
+        var h = document.getElementById("id1");
+        h.innerHTML = "최종 결과값은 : " + calculator.calculate();
+      };
+
+      var calculator = {};
+      calculator.calculate = function () {
+        var result = input.getFirstValue();
+        while (true) {
+          var symbol = input.getOperator();
+          if (symbol === "p") break;
+          var n2 = input.getSecondValue();
+
+          if (symbol === "+") {
+            result += n2;
+          } else if (symbol === "-") {
+            result -= n2;
+          } else if (symbol === "x") {
+            result *= n2;
+          } else if (symbol === "/") {
+            result /= n2;
+          }
+        }
+        return result;
+      };
+      output.print();
+    </script>
+  </body>
+</html>
