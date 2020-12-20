@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>코딩 아무거나 테스트 해보기</title>
+  </head>
+  <body>
+    숫자를 입력하시오: <input id="input1" onchange="printName()" />
+    <div id="result"></div>
+    <script>
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function getSplitNum(num) {
+        const arr = [];
+        arr[0] = Math.floor(num / 100);
+        num = num - Math.floor(num / 100) * 100;
+        arr[1] = Math.floor(num / 10);
+        num = num - Math.floor(num / 10) * 10;
+        arr[2] = num;
+
+        return arr;
+      }
+      function printName() {
+        const name = document.getElementById("input1").value;
+        document.getElementById("result").innerText = name;
+      }
+      function main() {
+        var ranNum = getRandomInt(100, 999);
+        var ranNum2 = [];
+        counts = 0;
+        countb = 0;
+        ranNum2 = getSplitNum(ranNum);
+        var number = getSplitNum(245);
+        for (var i = 0; i < 3; i++) {
+          if (number[i] == ranNum2[i]) {
+            counts++;
+          }
+
+          for (var j = 0; j < 3; j++) {
+            if (number[i] == ranNum2[j] && i != j) {
+              countb++;
+            } else;
+          }
+        }
+
+        if (counts == 0 && countb == 0) {
+          console.log("맞는 숫자가 없어");
+        } else {
+          console.log(counts + " strike");
+          console.log(countb + " ball");
+        }
+
+        console.log(ranNum2);
+        console.log(number);
+      }
+      main();
+    </script>
+  </body>
+</html>

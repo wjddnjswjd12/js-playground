@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var strings = "F2R'2UR'U'F'2";
+      var temp = strings.split("");
+      var isNum = /[0-9]/;
+      var isEng = /[a-zA-Z]/; //regex test()메소드
+      console.log(temp);
+      var array = [];
+      while (temp.length > 0) {
+        for (var i = 0; i < temp.length; i++) {
+          if (isEng.test(temp[i]) && temp[i + 1] == "'") {
+            if (isNum.test(temp[i + 2])) {
+              var temp2 = temp.splice(i, 3).join("");
+              array.push(temp2);
+            } else {
+              var temp2 = temp.splice(i, 2).join("");
+              array.push(temp2);
+            }
+            break;
+          } else if (isEng.test(temp[i]) && temp[i + 1] !== "'") {
+            if (isNum.test(temp[i + 1])) {
+              var temp2 = temp.splice(i, 2).join("");
+              array.push(temp2);
+            } else {
+              var temp2 = temp.splice(i, 1).join("");
+              array.push(temp2);
+            }
+            break;
+          }
+        }
+      }
+
+      console.log(temp2);
+      console.log(array);
+    </script>
+  </body>
+</html>
