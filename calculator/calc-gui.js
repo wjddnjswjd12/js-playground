@@ -13,19 +13,9 @@ var clickNumbers = function (event) {
     case "BS":
       input.array.pop();
       break;
-
     case "+":
-      input.array.push(" " + str + " ");
-      break;
-
     case "-":
-      input.array.push(" " + str + " ");
-      break;
-
     case "*":
-      input.array.push(" " + str + " ");
-      break;
-
     case "/":
       input.array.push(" " + str + " ");
       break;
