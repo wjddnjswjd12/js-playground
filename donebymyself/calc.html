@@ -7,7 +7,7 @@
         width: 140px;
         color: white;
         height: 50px;
-        font-size: x-large;
+        font-size: large;
       }
       button {
         width: 30px;
@@ -19,28 +19,28 @@
   <body>
     <div id="output">0</div>
     <div id="btn1">
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>/</button>
+      <button id="7" onclick="clickNumb(event)">7</button>
+      <button onclick="clickNumb(event)">8</button>
+      <button onclick="clickNumb(event)">9</button>
+      <button onclick="clickNumb(event)">/</button>
     </div>
     <div id="btn2">
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>*</button>
+      <button onclick="clickNumb(event)">4</button>
+      <button onclick="clickNumb(event)">5</button>
+      <button onclick="clickNumb(event)">6</button>
+      <button onclick="clickNumb(event)">*</button>
     </div>
     <div id="btn3">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>-</button>
+      <button onclick="clickNumb(event)">1</button>
+      <button onclick="clickNumb(event)">2</button>
+      <button onclick="clickNumb(event)">3</button>
+      <button onclick="clickNumb(event)">-</button>
     </div>
     <div id="btn3">
-      <button>BS</button>
-      <button>0</button>
-      <button>=</button>
-      <button>+</button>
+      <button onclick="clickBs(event)">BS</button>
+      <button onclick="clickNumb(event)">0</button>
+      <button onclick="clickEqual(event)">=</button>
+      <button onclick="clickNumb(event)">+</button>
     </div>
     <script src="calc.js"></script>
   </body>
