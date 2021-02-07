@@ -15,3 +15,6 @@ var fact = function (n) {
   if (n <= 1) return 1;
   return n * arguments.callee(n - 1);
 };
+
+//arguments.callee는 이름이 없는 익명함수도 재귀호출할수있다.
+//왜냐하면 지금 실행중인 함수를 가리키기 때문이다.

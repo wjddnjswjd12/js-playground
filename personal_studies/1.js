@@ -23,5 +23,8 @@ function multiply(a, b) {
   b = b || 1;
   return a * b;
 }
-multiply(2, 3);
-multiply(2);
+multiply(2, 3); // 6
+multiply(2); // 2
+
+// 참고로 ||연산자는 왼쪽 피연산자가 true로 평가되면 왼쪽 피연산자 반환, false로 평가되면 오른쪽 피연산자 반환
+//약간.. b?b:1 같은 느낌?..인가...
